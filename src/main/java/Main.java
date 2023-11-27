@@ -726,8 +726,8 @@ public class Main {
                     "3 String operations\n" +
                     "4 Array operations\n" +
                     "5 Bit operations\n" +
-                    "6 Other operations\n" +
-                    "7 Exit\n");
+                    // "6 Other operations\n" +
+                    "6 Exit\n");
             Scanner sc = new Scanner(System.in);
             int ch = sc.nextInt();
             Main mn = new Main();
@@ -756,10 +756,10 @@ public class Main {
                 } else if (chs == 4) {
                     radixsort(array, n);
                 } else if (chs == 5) {
-                    System.out.println("Enter the exp\n");
-                    int exp = sc.nextInt();
+                    // System.out.println("Enter the exp\n");
+                    // int exp = sc.nextInt();
                     int arr2[] = array.stream().mapToInt(Integer::intValue).toArray();
-                    countSort(arr2, n, exp);
+                    countSort(arr2, n, 1);
                 }
             } else if (ch == 2) {
                 System.out.println("This is search utility");
@@ -977,25 +977,27 @@ public class Main {
                         System.out.println("N is not a power of four");
                     }
                 }
-            } else if (ch == 6) {
-                System.out.println("Other operations Menu\n");
-                System.out.println("1: Fibonacci of number\n" +
-                        "2: Power function(x raised to the power y)");
-                int ch6 = sc.nextInt();
-                if (ch6 == 1) {
-                    System.out.println("Enter the number\n");
-                    int n = sc.nextInt();
-                    System.out.println("Fibonacci of number " + n + "is= " + fib(n));
-                }
-                if (ch6 == 2) {
-                    System.out.println("Enter the number x\n");
-                    int x = sc.nextInt();
-                    System.out.println("raised to the power y\n");
-                    int y = sc.nextInt();
-                    System.out.println("Power(" + x + "," + y + ")" + "= " + mn.power(x, y));
-                }
-            } else if (ch == 7) {
-                System.out.println("Thank you\n Bye! Have a Good day!\n");
+            }
+            // else if (ch == 6) {
+            // System.out.println("Other operations Menu\n");
+            // System.out.println("1: Fibonacci of number\n" +
+            // "2: Power function(x raised to the power y)");
+            // int ch6 = sc.nextInt();
+            // if (ch6 == 1) {
+            // System.out.println("Enter the number\n");
+            // int n = sc.nextInt();
+            // System.out.println("Fibonacci of number " + n + "is= " + fib(n));
+            // }
+            // if (ch6 == 2) {
+            // System.out.println("Enter the number x\n");
+            // int x = sc.nextInt();
+            // System.out.println("raised to the power y\n");
+            // int y = sc.nextInt();
+            // System.out.println("Power(" + x + "," + y + ")" + "= " + mn.power(x, y));
+            // }
+            // }
+            else if (ch == 6) {
+                System.out.println("Thank you\nBye! Have a Good day!\n");
                 break;
             }
         }
